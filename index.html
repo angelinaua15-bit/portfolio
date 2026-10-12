@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angelina Ivaniv — сайти, боти та цифрові продукти</title>
+  <meta name="description" content="Angelina Ivaniv — незалежна розробниця зі Львова. Сайти, Telegram-боти, Mini Apps і мобільні продукти: від структури до запуску.">
+  <meta name="theme-color" content="#10120f">
+  <meta property="og:title" content="Angelina Ivaniv — сайти, боти та цифрові продукти">
+  <meta property="og:description" content="Преміальні цифрові продукти зі Львова. Лендинги, магазини, Telegram-системи та мобільні застосунки.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <p class="preloader__kicker">Portfolio</p>
+      <p class="preloader__name">Angelina Ivaniv</p>
+      <div class="preloader__bar"><i></i></div>
+    </div>
+  </div>
+
+  <a class="skip" href="#work">Перейти до робіт</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" data-cursor="link">
+        <span>Angelina</span>
+        <em>Ivaniv</em>
+      </a>
+      <nav class="nav__links" aria-label="Розділи">
+        <a href="#work">Роботи</a>
+        <a href="#about">Про мене</a>
+        <a href="#services">Напрями</a>
+        <a href="#process">Підхід</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+      <a class="nav__cta" href="https://t.me/angelinadevv" target="_blank" rel="noreferrer">Telegram</a>
+      <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+        <span class="sr">Меню</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Мобільне меню">
+      <a href="#work">Роботи</a>
+      <a href="#about">Про мене</a>
+      <a href="#services">Напрями</a>
+      <a href="#process">Підхід</a>
+      <a href="#faq">Питання</a>
+      <a href="#contact">Контакт</a>
+      <a class="menu__ext" href="https://t.me/angelinadevv" target="_blank" rel="noreferrer">Написати в Telegram</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><i></i> Доступна до нових проєктів · Львів</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Роблю сайти, боти</span></span>
+            <span class="line"><span>й продукти, які</span></span>
+            <span class="line"><span>виглядають <em>бездоганно.</em></span></span>
+          </h1>
+          <p class="hero__lead reveal">
+            Незалежна розробниця. Збираю цифрові системи від першої структури до запуску —
+            з витримкою, яку очікують від сильного бренду, і з логікою, яка доводить людину до дії.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--light" href="https://t.me/angelinadevv" target="_blank" rel="noreferrer" data-magnetic>
+              Написати в Telegram
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#work" data-magnetic>Дивитись роботи</a>
+          </div>
+        </div>
+
+        <aside class="hero__aside reveal">
+          <div class="seal" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <path id="sealPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+              </defs>
+              <text>
+                <textPath href="#sealPath" xlink:href="#sealPath">Сайти · Боти · Mini Apps · Мобільні · Продукти · </textPath>
+              </text>
+            </svg>
+            <span>A</span>
+          </div>
+          <ul class="aside-list">
+            <li><span>База</span><strong>Львів, Україна</strong></li>
+            <li><span>Практика</span><strong>3+ роки</strong></li>
+            <li><span>Обсяг</span><strong>20+ проєктів</strong></li>
+            <li><span>Формат</span><strong>Від ідеї до релізу</strong></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="hero__foot wrap">
+        <span>Гортайте</span>
+        <i></i>
+        <span>Web · Telegram · Mobile</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Сайти</span><span>Telegram-боти</span><span>Mini Apps</span><span>Мобільні застосунки</span><span>Веб-продукти</span><span>AI-інтеграції</span><span>Автоматизація</span>
+        <span>Сайти</span><span>Telegram-боти</span><span>Mini Apps</span><span>Мобільні застосунки</span><span>Веб-продукти</span><span>AI-інтеграції</span><span>Автоматизація</span>
+      </div>
+    </div>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker">02 — Обране</p>
+          <h2>Роботи, якими<br>можна міряти рівень.</h2>
+          <p class="sec-note">Клієнтські запуски і власні продукти. Частина — з GitHub, частина — живі сайти, які вже працюють.</p>
+        </header>
+
+        <div class="cases">
+          <article class="case">
+            <a class="poster poster--kk" href="https://kingkonglab.com/" target="_blank" rel="noreferrer" aria-label="Відкрити King Kong Lab">
+              <span class="poster__index">01</span>
+              <span class="poster__mark">KK</span>
+              <span class="poster__url">kingkonglab.com</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Студія · сайт</p>
+              <h3>King Kong Lab</h3>
+              <p>Сайт digital-студії: послуги, ритм пропозиції і візуальна система, яка тримає увагу з першого екрана. Зібраний як чистий статичний продукт — швидкий і зібраний.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>Landing</li></ul>
+              <div class="case__links">
+                <a href="https://kingkonglab.com/" target="_blank" rel="noreferrer">Живий сайт</a>
+                <a href="https://github.com/angelinaua15-bit/kingkonglab-site" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <a class="poster poster--khitar" href="https://v0-luxury-retreat-landing-page-brown.vercel.app/" target="_blank" rel="noreferrer" aria-label="Відкрити Khitar Retreat">
+              <span class="poster__index">02</span>
+              <span class="poster__mark">Khitar</span>
+              <span class="poster__url">Luxury retreat</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Гостинність · лендінг</p>
+              <h3>Khitar Retreat</h3>
+              <p>Преміальна сторінка карпатського ретриту. Тиша, матеріал, відчуття місця — і структура, яка не кричить, а веде до бронювання.</p>
+              <ul class="tags"><li>Landing</li><li>Hospitality</li><li>UI</li></ul>
+              <div class="case__links">
+                <a href="https://v0-luxury-retreat-landing-page-brown.vercel.app/" target="_blank" rel="noreferrer">Живий сайт</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <a class="poster poster--slavsko" href="https://gemp-slavsko.vercel.app/" target="_blank" rel="noreferrer" aria-label="Відкрити Slavsko Glamp">
+              <span class="poster__index">03</span>
+              <span class="poster__mark">Glamp</span>
+              <span class="poster__url">Славське</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Гостинність · глемпінг</p>
+              <h3>Slavsko Glamp</h3>
+              <p>Куполи в Карпатах: гори, чан, камін. Лендінг зібраний так, щоб відпочинок відчувався ще до бронювання — без візуального шуму.</p>
+              <ul class="tags"><li>HTML</li><li>Hospitality</li><li>Landing</li></ul>
+              <div class="case__links">
+                <a href="https://gemp-slavsko.vercel.app/" target="_blank" rel="noreferrer">Живий сайт</a>
+                <a href="https://github.com/angelinaua15-bit/gempSlavsko" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <a class="poster poster--sensora" href="https://sensora-lend.vercel.app/" target="_blank" rel="noreferrer" aria-label="Відкрити Sensora">
+              <span class="poster__index">04</span>
+              <span class="poster__mark">Sen</span>
+              <span class="poster__url">sensora</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Сервіс · лендінг</p>
+              <h3>Sensora</h3>
+              <p>Сторінка сервісу живих консультацій із перевіреними спеціалістами. Завдання — довіра: спокійний тон, ясна пропозиція, преміальний вигляд.</p>
+              <ul class="tags"><li>HTML</li><li>Service</li><li>Landing</li></ul>
+              <div class="case__links">
+                <a href="https://sensora-lend.vercel.app/" target="_blank" rel="noreferrer">Живий сайт</a>
+                <a href="https://github.com/angelinaua15-bit/sensora-lend" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <a class="poster poster--garden" href="https://gardentool.xyz/" target="_blank" rel="noreferrer" aria-label="Відкрити GardenTool">
+              <span class="poster__index">05</span>
+              <span class="poster__mark">GT</span>
+              <span class="poster__url">gardentool.xyz</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Комерція · магазин</p>
+              <h3>GardenTool</h3>
+              <p>Інтернет-магазин садового інструменту. Каталог, фільтрація і шлях до покупки, зібрані так, щоб вибір не втомлював.</p>
+              <ul class="tags"><li>E-commerce</li><li>UX</li><li>Catalog</li></ul>
+              <div class="case__links">
+                <a href="https://gardentool.xyz/" target="_blank" rel="noreferrer">Живий сайт</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <a class="poster poster--pilot" href="https://v0-bidpilot-ai-saas.vercel.app/" target="_blank" rel="noreferrer" aria-label="Відкрити BidPilot AI">
+              <span class="poster__index">06</span>
+              <span class="poster__mark">AI</span>
+              <span class="poster__url">BidPilot</span>
+              <i class="poster__shape"></i>
+            </a>
+            <div class="case__copy">
+              <p class="case__kicker">Продукт · Mini App</p>
+              <h3>BidPilot AI</h3>
+              <p>Telegram Mini App для фрілансерів: моніторинг проєктів і генерація заявок. Інтерфейс, у якому AI допомагає, а рішення лишається за людиною.</p>
+              <ul class="tags"><li>TypeScript</li><li>Telegram</li><li>OpenAI</li></ul>
+              <div class="case__links">
+                <a href="https://v0-bidpilot-ai-saas.vercel.app/" target="_blank" rel="noreferrer">Веб-версія</a>
+                <a href="https://t.me/BitPilotAI_bot" target="_blank" rel="noreferrer">Бот</a>
+                <a href="https://github.com/angelinaua15-bit/bid-pilot-ai" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--index" id="index">
+      <div class="wrap">
+        <header class="sec-head sec-head--row">
+          <div>
+            <p class="sec-kicker">03 — Архів</p>
+            <h2>Ще з практики.</h2>
+          </div>
+          <p class="sec-note">Власні продукти, освітні й громадські запуски. Код — на GitHub, де репозиторій публічний.</p>
+        </header>
+
+        <div class="index-list">
+          <a class="index-row" href="https://future-state-foundation-website.vercel.app/" target="_blank" rel="noreferrer">
+            <span>07</span>
+            <strong>Future State Foundation</strong>
+            <em>Громадська організація</em>
+            <small>Сайт</small>
+          </a>
+          <a class="index-row" href="https://notest.space/" target="_blank" rel="noreferrer">
+            <span>08</span>
+            <strong>NoteSpase</strong>
+            <em>Платформа конспектів для студентів</em>
+            <small>Продукт</small>
+          </a>
+          <a class="index-row" href="https://v0-doctor-fsd-website.vercel.app/" target="_blank" rel="noreferrer">
+            <span>09</span>
+            <strong>Doctor FSD</strong>
+            <em>Продуктовий лендінг аксесуарів</em>
+            <small>Комерція</small>
+          </a>
+          <a class="index-row" href="https://github.com/angelinaua15-bit/syntraa" target="_blank" rel="noreferrer">
+            <span>10</span>
+            <strong>Syntra</strong>
+            <em>Мобільна AI-система на React Native</em>
+            <small>GitHub</small>
+          </a>
+          <a class="index-row" href="https://github.com/angelinaua15-bit/AngelsNote" target="_blank" rel="noreferrer">
+            <span>11</span>
+            <strong>AngelsNote</strong>
+            <em>Telegram-планер: задачі, нотатки, ритм дня</em>
+            <small>GitHub</small>
+          </a>
+          <a class="index-row" href="https://v0-c-style-guide.vercel.app/" target="_blank" rel="noreferrer">
+            <span>12</span>
+            <strong>C++ Style Guide</strong>
+            <em>Навчальний ресурс про стиль коду</em>
+            <small>Освіта</small>
+          </a>
+          <a class="index-row" href="https://vibecoding-kappa-olive.vercel.app/" target="_blank" rel="noreferrer">
+            <span>13</span>
+            <strong>Vibe Coding</strong>
+            <em>Лендінг практичного курсу</em>
+            <small>Курс</small>
+          </a>
+        </div>
+        <p class="index-foot">
+          Повний код і чернетки —
+          <a href="https://github.com/angelinaua15-bit" target="_blank" rel="noreferrer">github.com/angelinaua15-bit</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <div class="wrap about__grid">
+        <div>
+          <p class="sec-kicker">04 — Практика</p>
+          <h2>Від ідеї до системи, якою користуються.</h2>
+        </div>
+        <div class="about__copy">
+          <p class="lede">Я Angelina Ivaniv. Працюю зі Львова і збираю продукти, у яких вигляд і логіка не сперечаються одне з одним.</p>
+          <p>Лендинг, магазин, бот, Mini App чи мобільний застосунок — для мене це одна задача: людина має зрозуміти пропозицію і зробити крок без інструкції. Тому я тримаю в одних руках структуру, інтерфейс і реалізацію.</p>
+          <p>Окремо веду власні продукти — NoteSpase, AngelsNote, Syntra. Це інша дисципліна, ніж клієнтський запуск: тут видно, як система живе після релізу, а не лише як виглядає макет.</p>
+          <ul class="stack">
+            <li>React / Next.js</li>
+            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Telegram</li>
+            <li>React Native</li>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap stats">
+        <article class="stat">
+          <strong data-count="20">0</strong>
+          <span>проєктів у практиці</span>
+        </article>
+        <article class="stat">
+          <strong data-count="3">0</strong>
+          <span>роки в розробці</span>
+        </article>
+        <article class="stat stat--exact">
+          <strong data-count="6">0</strong>
+          <span>напрямів: від сайту до мобільного</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker">05 — Напрями</p>
+          <h2>Закриваю цикл,<br>а не окремий екран.</h2>
+        </header>
+        <div class="services">
+          <article class="service">
+            <span>01</span>
+            <div>
+              <h3>Сайти та лендинги</h3>
+              <p>Преміальні сторінки й багатосторінкові сайти. Типографіка, ритм, адаптив, форми, базова пошукова підготовка і запуск.</p>
+            </div>
+            <em>Next.js · HTML</em>
+          </article>
+          <article class="service">
+            <span>02</span>
+            <div>
+              <h3>Telegram-боти</h3>
+              <p>Сценарії, бази, нагадування, адміністрування. Від особистого планера до сервісу з реальною щоденною логікою.</p>
+            </div>
+            <em>Python · Node.js</em>
+          </article>
+          <article class="service">
+            <span>03</span>
+            <div>
+              <h3>Mini Apps</h3>
+              <p>Інтерфейси всередині Telegram: кабінети, каталоги, AI-помічники. Зручно там, де вже сидить аудиторія.</p>
+            </div>
+            <em>React · Telegram</em>
+          </article>
+          <article class="service">
+            <span>04</span>
+            <div>
+              <h3>Мобільні застосунки</h3>
+              <p>React Native і Expo. Авторизація, профілі, щоденні сценарії — зібрані як продукт, а не як набір екранів.</p>
+            </div>
+            <em>Expo · Supabase</em>
+          </article>
+          <article class="service">
+            <span>05</span>
+            <div>
+              <h3>Веб-продукти</h3>
+              <p>Кабінети, спільноти, навчальні платформи. Ролі, дані, авторизація і спокійний інтерфейс для щоденної роботи.</p>
+            </div>
+            <em>Full-stack</em>
+          </article>
+          <article class="service">
+            <span>06</span>
+            <div>
+              <h3>AI та автоматизація</h3>
+              <p>Інтеграції моделей, вебхуки і сценарії, які знімають рутину. Технологія лишається всередині, зовні — ясна дія.</p>
+            </div>
+            <em>OpenAI · Webhooks</em>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--process" id="process">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker">06 — Підхід</p>
+          <h2>Чотири кроки.<br>Без зайвого шуму.</h2>
+        </header>
+        <ol class="process">
+          <li class="step">
+            <span>01</span>
+            <h3>Розмова</h3>
+            <p>Розбираємо задачу, аудиторію і те, що вже є. Фіксуємо, який результат вважаємо успіхом.</p>
+          </li>
+          <li class="step">
+            <span>02</span>
+            <h3>Каркас</h3>
+            <p>Структура, стек і послідовність запуску. Ви бачите, з чого складається продукт, ще до першого екрана.</p>
+          </li>
+          <li class="step">
+            <span>03</span>
+            <h3>Збірка</h3>
+            <p>Показую хід на живих екранах. Уточнюємо рішення там, де вони відчуваються, а не в абстрактному списку.</p>
+          </li>
+          <li class="step">
+            <span>04</span>
+            <h3>Запуск</h3>
+            <p>Деплой, передача доступів і короткий супровід, щоб система стала на місце і не лишилась «майже готовою».</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap faq__grid">
+        <header class="sec-head">
+          <p class="sec-kicker">07 — Питання</p>
+          <h2>Коротко і по суті.</h2>
+        </header>
+        <div class="faq">
+          <article class="faq__item">
+            <button type="button" aria-expanded="false">
+              Як швидко з’являється перший результат?
+              <i></i>
+            </button>
+            <div class="faq__panel">
+              <p>Лендинг або сайт-візитка — зазвичай від 3 до 7 днів. Веб-продукт або Telegram-бот — від 2 до 4 тижнів. Точний ритм залежить від обсягу і того, як швидко узгоджуємо рішення. Терміни фіксуємо на старті.</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button type="button" aria-expanded="false">
+              Чи можна взяти лише дизайн або лише код?
+              <i></i>
+            </button>
+            <div class="faq__panel">
+              <p>Так. Можна зібрати інтерфейс і передати його вашій команді, або взяти готову структуру і реалізувати її в коді. Найцілісніший результат виходить, коли обидва кроки в одних руках.</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button type="button" aria-expanded="false">
+              Що відбувається після запуску?
+              <i></i>
+            </button>
+            <div class="faq__panel">
+              <p>Передаю доступи, перевіряю, що форми, бот або кабінет живуть на вашому контурі, і лишаюсь на короткому супроводі. Далі продукт можна розвивати окремими етапами.</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button type="button" aria-expanded="false">
+              Чи можна добирати функціональність пізніше?
+              <i></i>
+            </button>
+            <div class="faq__panel">
+              <p>Так. Після релізу логічно додавати екрани, сценарії й інтеграції окремим кроком — коли вже видно, як люди користуються першою версією.</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button type="button" aria-expanded="false">
+              Чому на сайті немає прайса?
+              <i></i>
+            </button>
+            <div class="faq__panel">
+              <p>Проєкти різні за обсягом і відповідальністю. Формат співпраці проговорюємо особисто, після того як зрозуміла задача. Напишіть у Telegram — відповім по суті, без шаблонної сітки пакетів.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact__inner">
+        <p class="sec-kicker sec-kicker--light">08 — Зв’язок</p>
+        <h2>Розкажіть<br>про задачу.</h2>
+        <p>Кілька речень достатньо: що за продукт, для кого він і що має статися після запуску. Я запропоную, з чого зібрати систему.</p>
+        <div class="contact__actions">
+          <a class="btn btn--brass" href="https://t.me/angelinadevv" target="_blank" rel="noreferrer" data-magnetic>
+            @angelinadevv
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--ghost-light" href="https://github.com/angelinaua15-bit" target="_blank" rel="noreferrer" data-magnetic>GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <p class="nav__brand"><span>Angelina</span> <em>Ivaniv</em></p>
+        <p class="footer__note">Сайти, боти, Mini Apps і продукти зі Львова.</p>
+      </div>
+      <div>
+        <p class="footer__label">Навігація</p>
+        <a href="#work">Роботи</a>
+        <a href="#about">Про мене</a>
+        <a href="#services">Напрями</a>
+        <a href="#process">Підхід</a>
+        <a href="#contact">Контакт</a>
+      </div>
+      <div>
+        <p class="footer__label">Контакти</p>
+        <a href="https://t.me/angelinadevv" target="_blank" rel="noreferrer">Telegram · @angelinadevv</a>
+        <a href="https://github.com/angelinaua15-bit" target="_blank" rel="noreferrer">GitHub · angelinaua15-bit</a>
+        <span>Львів, Україна</span>
+      </div>
+    </div>
+    <div class="wrap footer__bar">
+      <span>© <span id="year">2026</span> Angelina Ivaniv</span>
+      <span>Зібрано з увагою до ритму</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
