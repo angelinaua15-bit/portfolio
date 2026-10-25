@@ -40,13 +40,22 @@
       delay: 1.25
     });
 
-    gsap.utils.toArray(".case, .service, .step, .index-row, .stat").forEach((el) => {
+    gsap.utils.toArray(".case, .service, .step, .index-row, .stat, .flagship, .app-card, .system, .client, .geo li").forEach((el) => {
       gsap.from(el, {
         scrollTrigger: { trigger: el, start: "top 88%" },
         y: 28,
         opacity: 0,
         duration: 0.9,
         ease: "power3.out"
+      });
+    });
+
+    gsap.utils.toArray("[data-float]").forEach((el) => {
+      const shift = Number(el.dataset.float || 0);
+      gsap.fromTo(el, { yPercent: shift / 4 }, {
+        yPercent: -shift / 4,
+        ease: "none",
+        scrollTrigger: { trigger: ".flagship", start: "top bottom", end: "bottom top", scrub: true }
       });
     });
 
@@ -62,6 +71,7 @@
 
     document.querySelectorAll(".stat strong").forEach((node) => {
       const target = Number(node.dataset.count || 0);
+      node.textContent = "0";
       ScrollTrigger.create({
         trigger: node,
         start: "top 85%",
