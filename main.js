@@ -40,22 +40,13 @@
       delay: 1.25
     });
 
-    gsap.utils.toArray(".case, .service, .step, .index-row, .stat, .flagship, .app-card, .system, .client, .geo li").forEach((el) => {
+    gsap.utils.toArray(".service, .step, .stat, .carousel").forEach((el) => {
       gsap.from(el, {
         scrollTrigger: { trigger: el, start: "top 88%" },
         y: 28,
         opacity: 0,
         duration: 0.9,
         ease: "power3.out"
-      });
-    });
-
-    gsap.utils.toArray("[data-float]").forEach((el) => {
-      const shift = Number(el.dataset.float || 0);
-      gsap.fromTo(el, { yPercent: shift / 4 }, {
-        yPercent: -shift / 4,
-        ease: "none",
-        scrollTrigger: { trigger: ".flagship", start: "top bottom", end: "bottom top", scrub: true }
       });
     });
 
@@ -195,6 +186,87 @@
       });
       el.addEventListener("pointerleave", () => { el.style.transform = ""; });
     });
+  }
+
+  const track = document.querySelector(".carousel__track");
+  if (track) {
+    const slides = Array.from(track.querySelectorAll(".slide"));
+    const now = document.getElementById("slideNow");
+    const bar = document.getElementById("slideBar");
+    const prev = document.getElementById("prevSlide");
+    const next = document.getElementById("nextSlide");
+    let current = 0;
+    const pad = (n) => String(n + 1).padStart(2, "0");
+
+    const setActive = (i) => {
+      current = i;
+      slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+      if (now) now.textContent = pad(i);
+      if (bar) bar.style.transform = `translateX(${i * 100}%)`;
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === slides.length - 1;
+    };
+    const goTo = (i) => {
+      const k = Math.max(0, Math.min(slides.length - 1, i));
+      const left = slides[k].offsetLeft - slides[0].offsetLeft;
+      track.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
+    };
+    const sync = () => {
+      const x = track.scrollLeft;
+      let best = 0;
+      let dist = Infinity;
+      slides.forEach((s, k) => {
+        const d = Math.abs(s.offsetLeft - slides[0].offsetLeft - x);
+        if (d < dist) { dist = d; best = k; }
+      });
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) best = slides.length - 1;
+      if (best !== current || !slides[best].classList.contains("is-active")) setActive(best);
+    };
+    let raf = 0;
+    track.addEventListener("scroll", () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(sync);
+    }, { passive: true });
+    prev && prev.addEventListener("click", () => goTo(current - 1));
+    next && next.addEventListener("click", () => goTo(current + 1));
+    track.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); goTo(current + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); goTo(current - 1); }
+    });
+    slides.forEach((s, k) => s.addEventListener("click", (e) => {
+      if (track.dataset.dragged) { e.preventDefault(); return; }
+      if (k !== current) { e.preventDefault(); goTo(k); }
+    }));
+
+    if (fine) {
+      let down = false;
+      let moved = false;
+      let startX = 0;
+      let startLeft = 0;
+      track.addEventListener("pointerdown", (e) => {
+        if (e.pointerType !== "mouse" || e.button !== 0) return;
+        down = true; moved = false;
+        startX = e.clientX; startLeft = track.scrollLeft;
+      });
+      window.addEventListener("pointermove", (e) => {
+        if (!down) return;
+        const dx = e.clientX - startX;
+        if (!moved && Math.abs(dx) > 6) { moved = true; track.classList.add("is-drag"); }
+        if (moved) track.scrollLeft = startLeft - dx;
+      });
+      window.addEventListener("pointerup", () => {
+        if (!down) return;
+        down = false;
+        if (moved) {
+          track.classList.remove("is-drag");
+          track.dataset.dragged = "1";
+          setTimeout(() => { delete track.dataset.dragged; }, 50);
+          sync();
+          goTo(current);
+        }
+      });
+    }
+    setActive(0);
   }
 
   setTimeout(showPage, 2200);
